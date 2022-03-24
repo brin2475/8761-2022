@@ -83,20 +83,15 @@ public class RobotContainer {
 
     JoystickButton trigger = new JoystickButton(WILLS_BORING_JOYSTICK, 1);
 
-    JoystickButton A = new
-     JoystickButton(Gamecube, 1);
-// When trigger held run cannon
+    
+// When trigger held run intake
     trigger.whenHeld(
       new StartEndCommand(() -> Intake.Load(Constants.Intake), 
       () -> Intake.stop(), 
       Intake)
     );
-// when held intake go
-    A.whenHeld(
-      new StartEndCommand(() -> Intake.Run(Constants.Intake),
-      () -> Intake.stop(), 
-      Intake)
-    );
+
+   
 
   }
 
